@@ -2,12 +2,10 @@ package br.com.catolica.mvc.Main;
 
 import br.com.catolica.mvc.Controller.UsuarioController;
 import br.com.catolica.mvc.Enums.EnumTipoUsuario;
-import br.com.catolica.mvc.Model.Usuario;
 import br.com.catolica.mvc.View.UsuarioView;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class Main {
     //V - View - (Controls the prints and the scanners of our code)
@@ -28,5 +26,7 @@ public class Main {
         pseudoUser.put("tipo",tipo);
 
         usuarioController.inserirUsuario(pseudoUser);
+
+        usuarioController.listarTodos();
     }
 }

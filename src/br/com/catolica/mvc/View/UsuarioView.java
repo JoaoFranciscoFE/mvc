@@ -9,14 +9,12 @@ public class UsuarioView {
     public String inputNome(){
         System.out.println("Digite seu nome: ");
         String nome = scanner.nextLine();
-        scanner.close();
         return nome;
     }
 
     public String inputEmail(){
         System.out.println("Digite seu email: ");
         String email = scanner.nextLine();
-        scanner.close();
         return email;
 
     }

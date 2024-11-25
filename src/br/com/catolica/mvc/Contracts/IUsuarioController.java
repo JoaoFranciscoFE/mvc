@@ -5,7 +5,6 @@ import br.com.catolica.mvc.Model.Usuario;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public interface IUsuarioController {
     boolean verficiarTipo(EnumTipoUsuario tipo);
@@ -15,6 +14,8 @@ public interface IUsuarioController {
     List<Usuario> listarTodos();
 
     List<Usuario> buscarUsuarioPorNome();
+
+    List<Usuario> buscarUsuarioPorNome(String nome);
 
     Usuario buscarPorEmail(String email);
 
