@@ -1,6 +1,7 @@
 package br.com.catolica.mvc.Controller;
 
 import br.com.catolica.mvc.Contracts.IUsuarioController;
+import br.com.catolica.mvc.Contracts.IUsuarioDAO;
 import br.com.catolica.mvc.Enums.EnumTipoUsuario;
 import br.com.catolica.mvc.Model.Usuario;
 
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class UsuarioController implements IUsuarioController {
+public class UsuarioController implements IUsuarioController, IUsuarioDAO {
     ArrayList<Usuario> bancoDados = new ArrayList<>();
 
     @Override
@@ -36,11 +37,6 @@ public class UsuarioController implements IUsuarioController {
     }
 
     @Override
-    public List<Usuario> buscarUsuarioPorNome() {
-        return List.of();
-    }
-
-    @Override
     public List<Usuario> buscarUsuarioPorNome(String nome) {
         ArrayList<Usuario> auxiliar = new ArrayList<>();
 
@@ -49,7 +45,7 @@ public class UsuarioController implements IUsuarioController {
                 auxiliar.add(user);
             }
         }
-        return List.of();
+        return auxiliar;
     }
 
     @Override
